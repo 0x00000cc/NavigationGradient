@@ -17,6 +17,8 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
+    // UIStatusBarStyleDefault 默认黑色
+    // UIStatusBarStyleLightContent 白色
     return UIStatusBarStyleDefault;
 }
 
