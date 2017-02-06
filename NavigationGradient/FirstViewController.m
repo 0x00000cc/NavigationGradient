@@ -30,9 +30,7 @@
     [super viewDidLoad];
     
     self.title = @"red";
-    self.navAlpha = 0.0f;
-    self.navigationBarColor = [UIColor redColor];
-    self.navHidden = true;
+    self.navigationBarColor = [UIColor cyanColor];
     UIButton *button =[[UIButton alloc] initWithFrame:CGRectMake(0,0, 50, 50)];
     [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"Push" forState:UIControlStateNormal];

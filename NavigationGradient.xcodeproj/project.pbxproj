@@ -17,6 +17,7 @@
 		4BDF94821E45CF110021E25B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF94811E45CF110021E25B /* SecondViewController.m */; };
 		4BDF948A1E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF94891E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m */; };
 		4BDF948D1E45E0950021E25B /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF948C1E45E0950021E25B /* BaseNavViewController.m */; };
+		4BDF94901E4814880021E25B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF948F1E4814880021E25B /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		4BDF94891E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+HmStatusBarStyle.m"; sourceTree = "<group>"; };
 		4BDF948B1E45E0950021E25B /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		4BDF948C1E45E0950021E25B /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		4BDF948E1E4814880021E25B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		4BDF948F1E4814880021E25B /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				4BDF947E1E45CED30021E25B /* FirstViewController.m */,
 				4BDF94801E45CF110021E25B /* SecondViewController.h */,
 				4BDF94811E45CF110021E25B /* SecondViewController.m */,
+				4BDF948E1E4814880021E25B /* ThirdViewController.h */,
+				4BDF948F1E4814880021E25B /* ThirdViewController.m */,
 				4BDF946F1E45C8040021E25B /* Assets.xcassets */,
 				4BDF94711E45C8040021E25B /* LaunchScreen.storyboard */,
 				4BDF94741E45C8040021E25B /* Info.plist */,
@@ -177,6 +182,7 @@
 				4BDF948A1E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m in Sources */,
 				4BDF946B1E45C8040021E25B /* ViewController.m in Sources */,
 				4BDF947C1E45CEA10021E25B /* BaseViewController.m in Sources */,
+				4BDF94901E4814880021E25B /* ThirdViewController.m in Sources */,
 				4BDF947F1E45CED30021E25B /* FirstViewController.m in Sources */,
 				4BDF94681E45C8040021E25B /* AppDelegate.m in Sources */,
 				4BDF94651E45C8040021E25B /* main.m in Sources */,
@@ -332,6 +338,7 @@
 				4BDF94791E45C8040021E25B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

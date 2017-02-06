@@ -1,30 +1,27 @@
 //
-//  SecondViewController.m
+//  ThirdViewController.m
 //  NavigationGradient
 //
-//  Created by 侯猛 on 2017/2/4.
+//  Created by 侯猛 on 2017/2/6.
 //  Copyright © 2017年 侯猛. All rights reserved.
 //
 
-#import "SecondViewController.h"
 #import "ThirdViewController.h"
+#import "ViewController.h"
 
-
-@interface SecondViewController ()
+@interface ThirdViewController ()
 
 @end
 
-@implementation SecondViewController
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleDefault;
-}
+@implementation ThirdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"yellow";
-    self.navigationBarColor = [UIColor yellowColor];
+    self.title = @"transparent";
+    // 导航栏透明度
+    self.navAlpha = 0.0f;
+    // 隐藏导航栏
+    //    self.navHidden = true;
     UIButton *button =[[UIButton alloc] initWithFrame:CGRectMake(0,0, 50, 50)];
     [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"Push" forState:UIControlStateNormal];
@@ -35,12 +32,7 @@
 
 - (void)clickButton:(UIButton *)sender
 {
-    [self.navigationController pushViewController:[ThirdViewController new] animated:true];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.navigationController pushViewController:[ViewController new] animated:true];
 }
 
 /*

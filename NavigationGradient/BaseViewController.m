@@ -69,11 +69,13 @@
 
 - (void)navBackImageAlpha:(CGFloat)alpha
 {
-    // 隐藏导航栏背景
+    // 导航栏背景透明度
     self.navBackImage.alpha = alpha;
+    // 导航栏底部横线透明度
     self.navLineImage.alpha = alpha;
 }
 
+// 筛选出导航栏底部横线
 - (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
     if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
         return (UIImageView *)view;
