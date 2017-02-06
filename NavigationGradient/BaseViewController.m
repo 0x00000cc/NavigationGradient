@@ -9,7 +9,8 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController ()
-
+@property (nonatomic, strong)UIImageView *navBackImage;
+@property (nonatomic, strong)UIImageView *navLineImage;
 @end
 
 @implementation BaseViewController
@@ -17,35 +18,81 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    if (!self.navHidden) {
+        // 当下级页面或者上级页面的导航栏没有隐藏的时候才改变颜色
+        // 否则会有颜色突变的BUG
+        [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+            self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
+            // 获取导航栏背景图片 来设置透明度
+            [self navBackImageAlpha:self.navAlpha];
+            
+        } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        
+            self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
+            [self navBackImageAlpha:self.navAlpha];
+        }];
+    }else
+    {
+        // 隐藏当前页面的导航栏
+        [self.navigationController setNavigationBarHidden:true animated:animated];
+        
+        [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+            // 获取导航栏背景图片 来设置透明度
+            [self navBackImageAlpha:0.0f];
+        } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+            
+            [self navBackImageAlpha:0.0f];
+            
+        }];
+    }
     
-    [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
-        UIImageView *imageView = self.navigationController.navigationBar.subviews.firstObject;
-        imageView.alpha = self.navAlpha;
-    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
-        UIImageView *imageView = self.navigationController.navigationBar.subviews.firstObject;
-        imageView.alpha = self.navAlpha;
-    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
-        UIImageView *imageView = self.navigationController.navigationBar.subviews.firstObject;
-        imageView.alpha = self.navAlpha;
-    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
-        UIImageView *imageView = self.navigationController.navigationBar.subviews.firstObject;
-        imageView.alpha = self.navAlpha;
-    }];
+    if (self.navHidden) {
+        // 显示当前页面的导航栏
+        [self.navigationController setNavigationBarHidden:false animated:animated];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.navHidden || self.navAlpha == 0.0f) {
+        // 视图已经出现的时候，如果导航栏是透明的或隐藏的，则把导航栏变成白色，防止切换的时候串色
+        self.navigationBarColor = [UIColor whiteColor];
+    }
+}
+
+- (void)navBackImageAlpha:(CGFloat)alpha
+{
+    // 隐藏导航栏背景
+    self.navBackImage.alpha = alpha;
+    self.navLineImage.alpha = alpha;
+}
+
+- (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        return (UIImageView *)view;
+    }
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self findHairlineImageViewUnder:subview];
+        if (imageView) {
+            return imageView;
+        }
+    }
+    return nil;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navBackImage = self.navigationController.navigationBar.subviews.firstObject;
+    self.navLineImage = [self findHairlineImageViewUnder:self.navigationController.navigationBar];
+    self.navHidden = self.navigationController.navigationBarHidden;
     self.navigationBarColor = [UIColor whiteColor];
     self.navAlpha = 1.0f;
     
@@ -54,20 +101,27 @@
     }
 }
 
+- (void)setNavigationBarColor:(UIColor *)navigationBarColor
+{
+    _navigationBarColor = navigationBarColor;
+    if (self.navigationController.viewControllers.count == 1) {
+        self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
+    }
+}
+
 - (void)settingBackButton
 {
-    UIImage* returnImage=[UIImage imageNamed:@"back"];
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(0, 0, 70, 44);
+    UIImage *backImage   = [UIImage imageNamed:@"back"];
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 44)];
     [backButton setTitle:@"" forState:UIControlStateNormal];
     [backButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -40, 0, 0)];
-    [backButton setImage:returnImage forState:UIControlStateNormal];
+    [backButton setImage:backImage forState:UIControlStateNormal];
     [backButton setImageEdgeInsets:UIEdgeInsetsMake(13.5, 0, 13.5, 60)];
     [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [backButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [backButton addTarget:self action:@selector(gotoBack) forControlEvents:UIControlEventTouchUpInside];
     
-    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    UIBarButtonItem *backButtonItem       = [[UIBarButtonItem alloc]initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backButtonItem;
     
 }
@@ -81,16 +135,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-// 解决一级页面响应滑动返回
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    if ([gestureRecognizer isEqual:self.navigationController.interactivePopGestureRecognizer] && [self.navigationController.viewControllers count]==1) {
-        return NO;
-    } else {
-        return YES;
-    }
-}
-
 /*
 #pragma mark - Navigation
 

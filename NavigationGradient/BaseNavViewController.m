@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // 开启页面的右滑返回手势
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.interactivePopGestureRecognizer.delegate = self;
     }
@@ -24,6 +26,7 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
+    // 解决一级页面响应右滑返回手势的BUG
     if ([gestureRecognizer isEqual:self.interactivePopGestureRecognizer] && self.viewControllers.count == 1) {
         return NO;
     } else {

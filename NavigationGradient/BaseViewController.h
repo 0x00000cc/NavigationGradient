@@ -10,7 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
-
 /**
  导航栏颜色
  */
@@ -20,5 +19,10 @@
  导航栏透明度
  */
 @property (nonatomic, assign)CGFloat navAlpha;
+
+/**
+ 当前页面的导航页是否隐藏(true为隐藏 false为显示)
+ */
+@property (nonatomic, assign)BOOL navHidden;
 
 @end
