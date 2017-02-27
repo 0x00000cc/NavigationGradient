@@ -77,7 +77,7 @@
 
 // 筛选出导航栏底部横线
 - (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
-    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0f) {
         return (UIImageView *)view;
     }
     for (UIView *subview in view.subviews) {
@@ -98,7 +98,7 @@
     self.navigationBarColor = [UIColor whiteColor];
     self.navAlpha = 1.0f;
     
-    if (self.navigationController.viewControllers.count != 1) {
+    if (self.navigationController.viewControllers.count != 1.0f) {
         [self settingBackButton];
     }
 }
@@ -106,7 +106,7 @@
 - (void)setNavigationBarColor:(UIColor *)navigationBarColor
 {
     _navigationBarColor = navigationBarColor;
-    if (self.navigationController.viewControllers.count == 1) {
+    if (self.navigationController.viewControllers.count == 1.0f) {
         self.navigationController.navigationBar.barTintColor = self.navigationBarColor;
     }
 }
@@ -114,13 +114,13 @@
 - (void)settingBackButton
 {
     UIImage *backImage   = [UIImage imageNamed:@"back"];
-    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 44)];
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 70.0f, 44.0f)];
     [backButton setTitle:@"" forState:UIControlStateNormal];
-    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -40, 0, 0)];
+    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(0.0f, -40.0f, 0.0f, 0.0f)];
     [backButton setImage:backImage forState:UIControlStateNormal];
-    [backButton setImageEdgeInsets:UIEdgeInsetsMake(13.5, 0, 13.5, 60)];
+    [backButton setImageEdgeInsets:UIEdgeInsetsMake(13.5f, 0.0f, 13.5f, 60.0f)];
     [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [backButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [backButton.titleLabel setFont:[UIFont systemFontOfSize:15.0f]];
     [backButton addTarget:self action:@selector(gotoBack) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *backButtonItem       = [[UIBarButtonItem alloc]initWithCustomView:backButton];
