@@ -26,7 +26,9 @@
     [super viewDidLoad];
     
     self.title = @"white";
-    self.navigationBarColor = [UIColor whiteColor];
+    self.navigationBarColor = [UIColor blackColor];
+    
+    self.navFirstAlpha = 0.0f;
     
     UIButton *button =[[UIButton alloc] initWithFrame:CGRectMake(0,0, 50, 50)];
     [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];

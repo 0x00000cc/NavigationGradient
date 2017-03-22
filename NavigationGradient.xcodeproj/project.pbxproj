@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B9147511E8243E8005C9845 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B91474C1E8243E8005C9845 /* BaseNavViewController.m */; };
+		4B9147521E8243E8005C9845 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B91474E1E8243E8005C9845 /* BaseViewController.m */; };
+		4B9147531E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9147501E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.m */; };
 		4BDF94651E45C8040021E25B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF94641E45C8040021E25B /* main.m */; };
 		4BDF94681E45C8040021E25B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF94671E45C8040021E25B /* AppDelegate.m */; };
 		4BDF946B1E45C8040021E25B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF946A1E45C8040021E25B /* ViewController.m */; };
 		4BDF94701E45C8040021E25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF946F1E45C8040021E25B /* Assets.xcassets */; };
 		4BDF94731E45C8040021E25B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF94711E45C8040021E25B /* LaunchScreen.storyboard */; };
-		4BDF947C1E45CEA10021E25B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF947B1E45CEA10021E25B /* BaseViewController.m */; };
 		4BDF947F1E45CED30021E25B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF947E1E45CED30021E25B /* FirstViewController.m */; };
 		4BDF94821E45CF110021E25B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF94811E45CF110021E25B /* SecondViewController.m */; };
-		4BDF948A1E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF94891E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m */; };
-		4BDF948D1E45E0950021E25B /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF948C1E45E0950021E25B /* BaseNavViewController.m */; };
 		4BDF94901E4814880021E25B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF948F1E4814880021E25B /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B91474B1E8243E8005C9845 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
+		4B91474C1E8243E8005C9845 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		4B91474D1E8243E8005C9845 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4B91474E1E8243E8005C9845 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4B91474F1E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+HmStatusBarStyle.h"; sourceTree = "<group>"; };
+		4B9147501E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+HmStatusBarStyle.m"; sourceTree = "<group>"; };
 		4BDF94601E45C8040021E25B /* NavigationGradient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationGradient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDF94641E45C8040021E25B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BDF94661E45C8040021E25B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,16 +36,10 @@
 		4BDF946F1E45C8040021E25B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BDF94721E45C8040021E25B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BDF94741E45C8040021E25B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BDF947A1E45CEA10021E25B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		4BDF947B1E45CEA10021E25B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4BDF947D1E45CED30021E25B /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		4BDF947E1E45CED30021E25B /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		4BDF94801E45CF110021E25B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		4BDF94811E45CF110021E25B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		4BDF94881E45D9390021E25B /* UINavigationController+HmStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+HmStatusBarStyle.h"; sourceTree = "<group>"; };
-		4BDF94891E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+HmStatusBarStyle.m"; sourceTree = "<group>"; };
-		4BDF948B1E45E0950021E25B /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
-		4BDF948C1E45E0950021E25B /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
 		4BDF948E1E4814880021E25B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		4BDF948F1E4814880021E25B /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B91474A1E8243E8005C9845 /* NavigationGradient */ = {
+			isa = PBXGroup;
+			children = (
+				4B91474B1E8243E8005C9845 /* BaseNavViewController.h */,
+				4B91474C1E8243E8005C9845 /* BaseNavViewController.m */,
+				4B91474D1E8243E8005C9845 /* BaseViewController.h */,
+				4B91474E1E8243E8005C9845 /* BaseViewController.m */,
+				4B91474F1E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.h */,
+				4B9147501E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.m */,
+			);
+			path = NavigationGradient;
+			sourceTree = "<group>";
+		};
 		4BDF94571E45C8040021E25B = {
 			isa = PBXGroup;
 			children = (
@@ -74,12 +87,7 @@
 		4BDF94621E45C8040021E25B /* NavigationGradient */ = {
 			isa = PBXGroup;
 			children = (
-				4BDF947A1E45CEA10021E25B /* BaseViewController.h */,
-				4BDF947B1E45CEA10021E25B /* BaseViewController.m */,
-				4BDF948B1E45E0950021E25B /* BaseNavViewController.h */,
-				4BDF948C1E45E0950021E25B /* BaseNavViewController.m */,
-				4BDF94881E45D9390021E25B /* UINavigationController+HmStatusBarStyle.h */,
-				4BDF94891E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m */,
+				4B91474A1E8243E8005C9845 /* NavigationGradient */,
 				4BDF94661E45C8040021E25B /* AppDelegate.h */,
 				4BDF94671E45C8040021E25B /* AppDelegate.m */,
 				4BDF94691E45C8040021E25B /* ViewController.h */,
@@ -178,14 +186,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BDF94821E45CF110021E25B /* SecondViewController.m in Sources */,
-				4BDF948D1E45E0950021E25B /* BaseNavViewController.m in Sources */,
-				4BDF948A1E45D9390021E25B /* UINavigationController+HmStatusBarStyle.m in Sources */,
+				4B9147521E8243E8005C9845 /* BaseViewController.m in Sources */,
 				4BDF946B1E45C8040021E25B /* ViewController.m in Sources */,
-				4BDF947C1E45CEA10021E25B /* BaseViewController.m in Sources */,
 				4BDF94901E4814880021E25B /* ThirdViewController.m in Sources */,
 				4BDF947F1E45CED30021E25B /* FirstViewController.m in Sources */,
 				4BDF94681E45C8040021E25B /* AppDelegate.m in Sources */,
+				4B9147531E8243E8005C9845 /* UINavigationController+HmStatusBarStyle.m in Sources */,
 				4BDF94651E45C8040021E25B /* main.m in Sources */,
+				4B9147511E8243E8005C9845 /* BaseNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

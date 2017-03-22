@@ -19,6 +19,10 @@
  导航栏透明度
  */
 @property (nonatomic, assign)CGFloat navAlpha;
+/**
+ 一级页面导航栏透明度
+ */
+@property (nonatomic, assign)CGFloat navFirstAlpha;
 
 /**
  当前页面的导航页是否隐藏(true为隐藏 false为显示)

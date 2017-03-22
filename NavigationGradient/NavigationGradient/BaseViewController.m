@@ -75,6 +75,15 @@
     self.navLineImage.alpha = alpha;
 }
 
+- (void)setNavFirstAlpha:(CGFloat)navFirstAlpha
+{
+    self.navAlpha = navFirstAlpha;
+    // 导航栏背景透明度
+    self.navBackImage.alpha = navFirstAlpha;
+    // 导航栏底部横线透明度
+    self.navLineImage.alpha = navFirstAlpha;
+}
+
 // 筛选出导航栏底部横线
 - (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
     if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0f) {
