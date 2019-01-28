@@ -1,7 +1,7 @@
 # 页面切换导航栏渐变，类似QQ导航栏效果。
 页面透明和不透明之间的切换 不同颜色之间的切换
 
-![QQ导航栏效果](https://a.photo/images/2018/10/29/92e9432aa76e1a32f2b458c4fe84f017.gif)
+![Animation Navigation Color](https://graph-bed-1255896725.cos.ap-beijing.myqcloud.com/animationnavigationcolor.gif)
 
 **注1** 通过集成基类来实现效果  
 **注2** 自定义UINavigationController类的原因有两种 <br>
