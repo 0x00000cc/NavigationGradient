@@ -145,7 +145,7 @@
 				TargetAttributes = {
 					4BDF945F1E45C8040021E25B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = R86F6R9SRT;
+						DevelopmentTeam = WKRBRL77BK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -155,6 +155,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -305,11 +306,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R86F6R9SRT;
+				DEVELOPMENT_TEAM = WKRBRL77BK;
 				INFOPLIST_FILE = NavigationGradient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HouMeng.NavigationGradient;
+				PRODUCT_BUNDLE_IDENTIFIER = HouMeng.NavigationGradient.w;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -318,11 +319,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R86F6R9SRT;
+				DEVELOPMENT_TEAM = WKRBRL77BK;
 				INFOPLIST_FILE = NavigationGradient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HouMeng.NavigationGradient;
+				PRODUCT_BUNDLE_IDENTIFIER = HouMeng.NavigationGradient.w;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
